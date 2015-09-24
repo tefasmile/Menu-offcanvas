@@ -1,0 +1,218 @@
+@import "nib"
+
+verde_A = #97C335
+gris_A = #2D2D2D
+gris_B = #0E0F0F
+
+.Canvas
+    overflow hidden
+    position relative
+    &-main
+        padding 10px 0
+    
+    &-sidebar
+        position absolute
+        right -200px
+        top 0
+        transition .3s
+        width 200px
+        &.is-active
+            right 0
+
+.Header
+    background gris_A
+    color white
+    height 30px
+    line-height 10px
+    padding 10px
+    position relative
+    &-logo
+        text-transform uppercase
+        font-weight normal
+        text-decoration underline
+        text-shadow 0 0 10px verde_A
+        font-size 18px
+    &-button
+        background orange
+        border none
+        border-radius 10px
+        color white
+        display none
+        padding 10px
+        position absolute
+        right 20px
+        top 10px
+        display none
+        &.is-active
+        	display block
+        
+.MainMenu
+    background gris_A
+    left -200px
+    margin 0
+    padding 0
+    position absolute
+    top 0
+    transition .3s
+    width 200px
+    &.is-active
+        left 0
+    &-item
+        text-align center
+        height 50px
+        line-height 50px
+        transition .3s
+        list-style none
+        &:hover
+            background #686868
+    &-link
+        color white
+        display block
+        font-size 14px
+        text-decoration none
+        text-transform uppercase
+        
+
+@media screen and (min-width : 767px)
+	.Header
+		&-button
+			display none
+	.MainMenu
+		left initial
+		right 0
+		width auto
+		&-item
+			display inline-block
+		&-link
+			padding 0 20px
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mi codigo css*/
+// @import "nib"
+// .Canvas
+// 	overflow hidden
+// 	position relative
+// 	&-main
+// 		padding 10px 0
+// 	&-sidebar
+// 		position absolute
+// 		right -200px
+// 		top 0
+// 		transition .3s
+// 		width 200px
+// 		&.is-active
+// 			right 0
+
+// .Header
+// 	background-color #011B5C
+// 	color white
+// 	padding 10px
+// 	position relative
+// 	&-logo
+// 		text-transform uppercase
+// 		font-weight normal
+// 		text-shadow 0px 0px 10px lime
+// 		font-size 18px
+// 	&-button
+// 		background orange
+// 		border none
+// 		border-radius 10px
+// 		color white
+// 		padding 10px
+// 		position absolute
+// 		right 20px
+// 		top 10px
+// 		&-is-active
+// 			display block
+
+// .MainMenu
+// 	background-color #011B5C
+// 	left -200px
+// 	margin 0
+// 	padding 0
+// 	position absolute
+// 	top 0
+// 	transition .3s
+// 	width 200px
+// 	&.is-active
+// 		left 0
+// 	&-item
+// 		text-align center
+// 		height 50px
+// 		line-height 50px
+// 		transition .3s
+// 		list-style none
+// 		&:hover
+// 			background #125F7C
+// 	&-link
+// 		color white
+// 		display block
+// 		font-size 14px
+// 		text-decoration none
+// 		text-transform uppercase
+
+
+// @media screen and (min-width: 767px)
+// 	.MainMenu
+// 		left initial
+// 		width auto
+//         right 0
+// 		&-item
+// 			display inline-block
+// 		&-link
+// 			padding 0 20px
+// 	.Header
+// 		&-button
+// 			display none
+
+		
+		
+// &-menu
+	// 	width 200px
+	// 	position absolute
+	// 	left -200px
+	// 	top 0
+	// 	-webkit-transition 1s
+	// 	&.is-active
+	// 		left 0		
+

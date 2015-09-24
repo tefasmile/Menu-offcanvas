@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Patron off-canvas ejemplo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/estilos.css?v=1.0">
+</head>
+<body>
+	<section class="Canvas">
+		<header class="Header verde_A is-active">
+			<h1 class="Header-logo">off-canvas</h1>
+			<button class="Header-button is-active" id="showMenu">Show menú</button>
+			<button class="Header-button" id="hideMenu">Hide menú</button>
+			
+			<ul class="MainMenu" id="menu">
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Cursos
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Eventos
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Conferencias
+					</a>
+				</li>
+				<li class="MainMenu-item">
+					<a href="" class="MainMenu-link">
+						Conctato
+					</a>
+				</li>
+			</ul>
+		</header>
+		<div class="Canvas-main verde_B">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima id quis at totam ipsam cum assumenda suscipit sit a. Doloribus itaque dolorum atque,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et corrupti, architecto beatae reiciendis molestiae eum odit nesciunt itaque ducimus in vero nisi amet explicabo atque, autem suscipit ipsam sit cum. animi voluptates molestiae autem mollitia fugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima id quis at totam ipsam cum assumenda,Lorem ipsum dolor sit amet, consectetur adipisicing elit.QuisEt corrupti, architecto beatae reiciendis molestiae eum odit nesciunt itaque ducimus in vero nisi amet explicabo atque, autem suscipit ipsam sit cum. animi voluptates molestiae autem mollitia fugiat.
+		</div>
+		<div class="Canvas-sidebar verde_C">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit animi, magni quam, nemo perferendis nisi odit tempore similique cumque est maxime eveniet delectus hic dolores. Magni voluptatem tenetur, corporis ipsum!
+		</div>
+	</section>
+	<script src="js/Hammer.min.js"></script>
+	<script type="text/javascript">
+		var $buttonShowMenu = document.getElementById('showMenu');
+		var $buttonHideMenu = document.getElementById('hideMenu');
+		var $menu = document.getElementById('menu');
+		//Bloque de codigo Hammer
+		var $body = document.querySelector('body');
+		//Implementacion hammer
+		var body = new Hammer($body);
+
+		//Funciones
+		var showMenu = function (){
+			$buttonShowMenu.classList.remove('is-active');
+			$buttonHideMenu.classList.add('is-active');
+			$menu.classList.add('is-active');
+		}
+
+		var hideMenu = function (){
+			$buttonShowMenu.classList.add('is-active');
+			$buttonHideMenu.classList.remove('is-active');
+			$menu.classList.remove('is-active');
+		}
+		//Eventos funcionales
+		$buttonShowMenu.addEventListener("click", showMenu);
+		$buttonHideMenu.addEventListener("click", hideMenu);
+		body.on('panright', showMenu);
+		body.on('panleft', hideMenu);
+	</script>
+</body>
+</html>
